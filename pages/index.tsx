@@ -4,7 +4,7 @@ import useSWR from 'swr';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const token = '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';
+const token = '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';
 const endpoint = 'https://api.github.com/graphql';
 
 const graphQLClient = new GraphQLClient(endpoint, {
@@ -61,11 +61,12 @@ export default function Home() {
     <div className="flex flex-col items-center space-y-8">
       <div className="relative">
         <input
-          className="w-80 border rounded-md p-3 shadow-inner focus:outline-none focus:border-yellow-400 focus:shadow-lg"
+          className="w-96 border rounded-full py-3 px-4 shadow-inner focus:outline-none focus:border-yellow-400 focus:shadow-lg"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for GitHub users by name"
         />
-        <div className="absolute right-3 inset-y-0 flex items-center">
+        <div className="absolute right-4 inset-y-0 flex items-center">
           <SearchIcon className="h-5 opacity-50" />
         </div>
       </div>
