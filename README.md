@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+I am using Tailwind CSS for styling, and SWR to interact with the API.
+
+## How to run
 
 First, run the development server:
 
