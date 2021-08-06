@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        background: '#050223',
+      },
+    },
   },
   variants: {
     extend: {},
