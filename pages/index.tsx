@@ -38,13 +38,17 @@ export default function Home() {
           <span>Number of results</span>
           <div className="flex items-center space-x-1">
             <button
-              className="p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"
+              className={`py-2 w-10 rounded bg-white bg-opacity-10 hover:bg-opacity-20 border-2 ${
+                numberOfResults === 12 ? 'border-white' : 'border-transparent'
+              }`}
               onClick={() => setNumberOfResults(12)}
             >
               12
             </button>
             <button
-              className="p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"
+              className={`py-2 w-10 rounded bg-white bg-opacity-10 hover:bg-opacity-20 border-2 ${
+                numberOfResults === 24 ? 'border-white' : 'border-transparent'
+              }`}
               onClick={() => setNumberOfResults(24)}
             >
               24
