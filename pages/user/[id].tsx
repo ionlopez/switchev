@@ -1,5 +1,6 @@
 import { NextPageContext } from 'next';
 
+//@ts-ignore
 export const Index = ({ id }) => <div>hello {id}</div>;
 
 Index.getInitialProps = async (ctx: NextPageContext) => {
