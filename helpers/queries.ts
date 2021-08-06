@@ -1,4 +1,5 @@
 export const userFields = `databaseId
+                            login
                             avatarUrl
                             location
                             name`;
@@ -22,5 +23,19 @@ export const userDetailQuery = (query: string, numberOfResults: number) => `quer
           }
         }
       }
+    }
+}`;
+
+export const userRepositoriesQuery = (login: string) => `query {
+    user(login: "${login}") {
+        name
+        email
+        avatarUrl
+        repositories(first: 50, isFork: false) { 
+            nodes { 
+                name 
+                url 
+                } 
+        } 
     }
 }`;

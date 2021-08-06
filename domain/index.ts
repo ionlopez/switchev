@@ -4,6 +4,7 @@ export interface User {
     name: string;
     location?: string;
     avatarUrl: string;
+    login: string;
   };
 }
 
@@ -20,4 +21,18 @@ export interface UserDetail extends User {
   twitterUsername?: string;
   url: string;
   websiteUrl?: string;
+}
+
+interface Repository {
+  name: string;
+  url: string;
+}
+
+export interface UserRepositories {
+  user: {
+    email: string;
+    name: string;
+    avatarUrl: string;
+    repositories: { nodes: Repository[] };
+  };
 }

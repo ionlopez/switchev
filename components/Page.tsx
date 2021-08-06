@@ -13,7 +13,7 @@ export const Page: React.FC = ({ children }) => (
     </Head>
     <div className="bg-background text-white min-h-screen font-sans flex flex-col justify-between">
       <header className="py-5 border-b border-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <Link href="/">
             <a className="space-y-1 block">
               <h1 className="font-bold text-xl">GitHub User Search</h1>
@@ -25,8 +25,7 @@ export const Page: React.FC = ({ children }) => (
           </Link>
         </div>
       </header>
-
-      <main className="container mx-auto py-6 px-4 flex-1">{children}</main>
+      <main className="container mx-auto p-6 flex-1">{children}</main>
     </div>
   </>
 );
