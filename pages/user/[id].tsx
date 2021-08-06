@@ -9,6 +9,7 @@ const fetcher = (query: string) => client.request(query);
 
 //@ts-ignore
 export const Index = ({ id }) => {
+  //TODO: Error handling
   const { data, error } = useSWR<UserRepositories>(userRepositoriesQuery(id), fetcher);
 
   if (!data) {

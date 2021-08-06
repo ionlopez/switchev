@@ -12,9 +12,11 @@ import { Summary } from 'components/search/Summary';
 const fetcher = (query: string) => client.request(query);
 
 export default function Home() {
+  //TODO: Debounce input change event
   const [query, setQuery] = useState('ion');
   const [numberOfResults, setNumberOfResults] = useState(12);
 
+  //TODO: Error handling
   const { data, error } = useSWR<SearchResults>(
     userDetailQuery(query, numberOfResults),
     fetcher,
